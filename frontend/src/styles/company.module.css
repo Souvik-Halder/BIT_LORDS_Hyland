@@ -1,0 +1,34 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  grid-gap: 20px;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 200px;
+  height: 150px;
+  border: 3px solid;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.graph {
+  display: grid;
+  background-color: #efefef80;
+  padding: 50px;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  grid-gap: 50px;
+}
+
+.linegraph {
+  grid-column: 1/ -1;
+  place-self: stretch;
+}

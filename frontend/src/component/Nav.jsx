@@ -7,12 +7,12 @@ const Nav = () => {
     <nav>
       <h1>Data Visualization and Prediction</h1>
       {/* <button> */}
-      <Link className={styles.link} to={'/'}>
+      <Link className={styles.link} to={'/allcompanies'}>
         All Companies
       </Link>
       {/* </button> */}
       {/* <button> */}
-      <Link className={styles.link} to={'/individual'}>
+      <Link className={styles.link} to={'/'}>
         Individual Company
       </Link>
       {/* </button> */}

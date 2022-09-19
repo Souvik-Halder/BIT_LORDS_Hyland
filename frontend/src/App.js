@@ -15,8 +15,8 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path='/' element={<AllCompanies />} />
-          <Route path='/individual' element={<Company />} />
+          <Route path='/' element={<Company />} />
+          <Route path='/allcompanies' element={<AllCompanies />} />
         </Routes>
       </Router>
     </div>

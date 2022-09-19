@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/company.module.css';
 import DataFetch from './DataFetch';
+import DataFetch2 from './DataFetch2';
 import PieChart from './PieChart';
 
 const Company = () => {
@@ -22,17 +23,16 @@ const Company = () => {
           </div>
         </div>
       </section>
-      {/* <section>
-        <h1>HEADING 2</h1>
+      <section>
+        <h1>Prediction Model of TCS</h1>
         <div className={styles.graph}>
-          <PieChart />
-          <PieChart />
+        
           <div className={styles.linegraph}>
-            <DataFetch />
+            <DataFetch2 />
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <h1>HEADING 3</h1>
         <div className={styles.graph}>
           <PieChart />

@@ -1,4 +1,4 @@
-![Screenshot (117)](https://user-images.githubusercontent.com/83994461/191001545-246c0050-66d3-4e94-b7ad-1cd249bf7053.png)
+
 
 # BIT_LORDS_Hyland
 
@@ -39,3 +39,8 @@ Our visulaization Models
 Our Prediction Model
 
 ![Screenshot (117)](https://user-images.githubusercontent.com/83994461/191001545-246c0050-66d3-4e94-b7ad-1cd249bf7053.png)
+
+# Our Future workflow
+
+- We are going to show the all companies graph in a page we are also worked little bit on it
+- We also create spearate ML model for 5 more companies like TCS , Infosys ,Samsung , Cognizant, Autodesk

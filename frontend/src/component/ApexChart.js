@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import PieChart from './PieChart';
+import styles from '../styles/apexchart.module.css';
 
 export class ApexChart extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export class ApexChart extends Component {
         {
           name: 'Close',
           data: this.props.closearr,
-          color: '#FFFF00'
+          color: '#FFFF00',
         },
       ],
       options: {
@@ -44,16 +45,16 @@ export class ApexChart extends Component {
           },
         },
         xaxis: {
-          categories: this.props.datearr,     
-               range: 28,
+          categories: this.props.datearr,
+          range: 28,
           zoom: {
             enabled: true,
           },
           labels: {
-            formatter: function(value) {
-              return value.toFixed(2)    
-        }
-      }
+            formatter: function (value) {
+              return value.toFixed(2);
+            },
+          },
         },
       },
     };
@@ -273,12 +274,22 @@ export class ApexChart extends Component {
   render() {
     return (
       <>
-        <button onClick={this.dayset}>Fetch Data</button>
+        <button className={styles.button} onClick={this.dayset}>
+          Fetch Data
+        </button>
         <div>
-          <button onClick={this.dayset}>30 days</button>
-          <button onClick={this.sixtydayset}>60 days</button>
-          <button onClick={this.nintydayset}>90 days</button>
-          <button onClick={this.alldayset}>All Days</button>
+          <button className={styles.button} onClick={this.dayset}>
+            30 days
+          </button>
+          <button className={styles.button} onClick={this.sixtydayset}>
+            60 days
+          </button>
+          <button className={styles.button} onClick={this.nintydayset}>
+            90 days
+          </button>
+          <button className={styles.button} onClick={this.alldayset}>
+            All Days
+          </button>
           <ReactApexChart
             options={this.state.options}
             series={this.state.series}

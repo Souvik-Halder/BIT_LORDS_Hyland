@@ -6,12 +6,12 @@ import PieChart from './PieChart';
 const AllCompanies = () => {
   return (
     <>
-      <div className={styles.cards}>
+      {/* <div className={styles.cards}>
         <div className={styles.card}>Information</div>
         <div className={styles.card}>Information</div>
         <div className={styles.card}>Information</div>
         <div className={styles.card}>Information</div>
-      </div>
+      </div> */}
       <section>
         <h1>COMPANY 1</h1>
         <div className={styles.graph}>
@@ -25,8 +25,8 @@ const AllCompanies = () => {
       <section>
         <h1>COMPANY 2</h1>
         <div className={styles.graph}>
-          <PieChart />
-          <PieChart />
+          {/* <PieChart />
+          <PieChart /> */}
           <div className={styles.linegraph}>
             <DataFetch />
           </div>
@@ -35,8 +35,8 @@ const AllCompanies = () => {
       <section>
         <h1>COMPANY 3</h1>
         <div className={styles.graph}>
-          <PieChart />
-          <PieChart />
+          {/* <PieChart />
+          <PieChart /> */}
           <div className={styles.linegraph}>
             <DataFetch />
           </div>

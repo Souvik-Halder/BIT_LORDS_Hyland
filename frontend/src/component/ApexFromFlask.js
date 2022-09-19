@@ -7,8 +7,9 @@ export class ApexFromFlask extends Component {
         this.state = {
         
           series: [{
-              name: "Open",
-              data:this.props.dataarr
+              name: "Prediction",
+              data:this.props.dataarr,
+              color: '#ff0000',
           }],
           options: {
             chart: {
@@ -38,7 +39,13 @@ export class ApexFromFlask extends Component {
               },
             },
             xaxis: {
-              categories: ["1","3","5","6"]
+              categories:this.props.dayarr,
+              labels: {
+                formatter: function(value) {
+                  return value;   
+            }
+          }
+              
             }
           },
         
@@ -46,7 +53,7 @@ export class ApexFromFlask extends Component {
         };
       }
   fetch=()=>{
-
+    
   }
   render() {
     return (
@@ -54,7 +61,7 @@ export class ApexFromFlask extends Component {
         
       <div>
         <button onClick={fetch}>fetch</button>
-        {this.props.dataarr}
+      <div>{this.props.dayarr}</div>
         <ReactApexChart options={this.state.options} series={
         this.state.series} type="area" height={350}/></div>
     )

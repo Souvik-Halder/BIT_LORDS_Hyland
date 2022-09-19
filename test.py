@@ -140,7 +140,7 @@ df3.extend(lst_output)
 len(df3)
 
 b=[]
-for list in df3:
+for list in lst_output:
    for number in list:
        b.append(number)
 print(b)
@@ -152,4 +152,3 @@ def hello():
 if __name__=='__main__':
     app.run(debug=True)
 # plt.plot(df3)
-print(df3)

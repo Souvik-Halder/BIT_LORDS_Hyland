@@ -11,12 +11,13 @@ import AllCompanies from './component/AllCompanies';
 function App() {
   return (
     <div className='App'>
-      <Nav />
+      {/* <Nav /> */}
       {/* <DataFetch />
       <DataFetch2 />
       <DataFetch />
       <DataFetch />
       <ApexChart /> */}
+      <DataFetch2/>
       {/* <Company /> */}
       <AllCompanies />
     </div>

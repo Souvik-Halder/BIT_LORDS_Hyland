@@ -15,7 +15,7 @@ export class ApexChart extends Component {
         {
           name: 'Close',
           data: this.props.closearr,
-          color: '#ff0000',
+          color: '#FFFF00'
         },
       ],
       options: {
@@ -44,11 +44,16 @@ export class ApexChart extends Component {
           },
         },
         xaxis: {
-          categories: this.props.datearr,
-          range: 28,
+          categories: this.props.datearr,     
+               range: 28,
           zoom: {
             enabled: true,
           },
+          labels: {
+            formatter: function(value) {
+              return value.toFixed(2)    
+        }
+      }
         },
       },
     };

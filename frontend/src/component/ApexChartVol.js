@@ -1,23 +1,17 @@
 import React, { Component } from 'react';
 import ReactApexChart from 'react-apexcharts';
 import PieChart from './PieChart';
-import styles from '../styles/apexchart.module.css';
 
-export class ApexChart extends Component {
+export class ApexChartVol extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       series: [
         {
-          name: 'Open',
-          data: this.props.openarr,
-        },
-        {
-          name: 'Close',
-          data: this.props.closearr,
-          color: '#FFFF00',
-        },
+          name: 'Volume',
+          data: this.props.volarr,
+        }
       ],
       options: {
         chart: {
@@ -45,45 +39,37 @@ export class ApexChart extends Component {
           },
         },
         xaxis: {
-          categories: this.props.datearr,
-          range: 28,
+          categories: this.props.datearr,     
+               range: 28,
           zoom: {
             enabled: true,
           },
           labels: {
-            formatter: function (value) {
-              return value.toFixed(2);
-            },
-          },
+            formatter: function(value) {
+              return value.toFixed(2)    
+        }
+      }
         },
       },
     };
   }
 
-  newdatearr = [];
-  newopenarr = [];
-  newclosearr = [];
+ newvolarr=[]
 
   dayset = () => {
-    this.newclosearr = [];
+    this.newvolarr = [];
     this.newdatearr = [];
-    this.newopenarr = [];
+   
     for (let index = 0; index < 30; index++) {
       this.newdatearr.push(this.props.datearr[index]);
-      this.newclosearr.push(this.props.closearr[index]);
-      this.newopenarr.push(this.props.openarr[index]);
+      this.newvolarr.push(this.props.volarr[index])
     }
     this.setState({
       series: [
         {
-          name: 'Open',
-          data: this.newopenarr,
-        },
-        {
-          name: 'Close',
-          data: this.newclosearr,
-          color: '#ff0000',
-        },
+          name: 'Volume',
+          data: this.newvolarr,
+        }
       ],
       options: {
         chart: {
@@ -119,14 +105,13 @@ export class ApexChart extends Component {
 
   alldayset = () => {
     this.newdatearr = [];
-    this.newopenarr = [];
-    this.newclosearr = [];
+    this.newvolarr=[]
 
     this.setState({
       series: [
         {
-          name: 'Open',
-          data: this.props.openarr,
+          name: 'Volume',
+          data: this.props.volarr,
         },
         {
           name: 'Close',
@@ -168,24 +153,18 @@ export class ApexChart extends Component {
 
   sixtydayset = () => {
     this.newclosearr = [];
-    this.newdatearr = [];
-    this.newopenarr = [];
+    this.newvolarr=[]
     for (let index = 0; index < 60; index++) {
       this.newdatearr.push(this.props.datearr[index]);
-      this.newclosearr.push(this.props.closearr[index]);
-      this.newopenarr.push(this.props.openarr[index]);
+      this.newvolarr.push(this.props.volarr[index]);
+     
     }
     this.setState({
       series: [
         {
-          name: 'Open',
-          data: this.newopenarr,
-        },
-        {
-          name: 'Close',
-          data: this.newclosearr,
-          color: '#ff0000',
-        },
+          name: 'Volume',
+          data: this.newvolarr,
+        }
       ],
       options: {
         chart: {
@@ -220,24 +199,18 @@ export class ApexChart extends Component {
   };
   nintydayset = () => {
     this.newclosearr = [];
-    this.newdatearr = [];
-    this.newopenarr = [];
+    this.newvolarr=[]
     for (let index = 0; index < 90; index++) {
       this.newdatearr.push(this.props.datearr[index]);
-      this.newclosearr.push(this.props.closearr[index]);
-      this.newopenarr.push(this.props.openarr[index]);
+      this.newvolarr.push(this.props.volarr[index]);
+      
     }
     this.setState({
       series: [
         {
-          name: 'Open',
-          data: this.newopenarr,
-        },
-        {
-          name: 'Close',
-          data: this.newclosearr,
-          color: '#ff0000',
-        },
+          name: 'Volume',
+          data: this.newvolarr,
+        }
       ],
       options: {
         chart: {
@@ -274,22 +247,13 @@ export class ApexChart extends Component {
   render() {
     return (
       <>
-        <button className={styles.button} onClick={this.dayset}>
-          Fetch Data
-        </button>
+      
+        <button onClick={this.dayset}>Fetch Data</button>
         <div>
-          <button className={styles.button} onClick={this.dayset}>
-            30 days
-          </button>
-          <button className={styles.button} onClick={this.sixtydayset}>
-            60 days
-          </button>
-          <button className={styles.button} onClick={this.nintydayset}>
-            90 days
-          </button>
-          <button className={styles.button} onClick={this.alldayset}>
-            All Days
-          </button>
+          <button onClick={this.dayset}>30 days</button>
+          <button onClick={this.sixtydayset}>60 days</button>
+          <button onClick={this.nintydayset}>90 days</button>
+          <button onClick={this.alldayset}>All Days</button>
           <ReactApexChart
             options={this.state.options}
             series={this.state.series}
@@ -304,4 +268,4 @@ export class ApexChart extends Component {
   }
 }
 
-export default ApexChart;
+export default ApexChartVol;

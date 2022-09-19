@@ -3,8 +3,6 @@ import axios from 'axios'
 import ApexFromFlask from './ApexFromFlask';
 function DataFetch2() {
 
-
-  
     const [data,setData]=useState([])
     useEffect(() => {
       try{
@@ -19,10 +17,17 @@ setData(res.data.data)
        }
       
       }, []);
-   
+
+      const dayarr=[]
+  for (let x = 0; x <data.length; x++) {
+    dayarr.push(x+1)
+    console.log(dayarr)
+  }
+
   return (
-   <div>
-    <ApexFromFlask dataarr={data}/>
+   <div className='App'>
+  
+    <ApexFromFlask dataarr={data} dayarr={dayarr}/>
    </div>
   )
 }

@@ -23,9 +23,10 @@ setData(res.data.data)
     dayarr.push(x+1)
     console.log(dayarr)
   }
-   
+
   return (
    <div className='App'>
+  
     <ApexFromFlask dataarr={data} dayarr={dayarr}/>
    </div>
   )

@@ -9,7 +9,7 @@ import datetime as dt
 end=dt.datetime.now()
 start = end - dt.timedelta(days = 2500)
 end,start
-stocklist = ['TTM']
+stocklist = ['INFY']
 stocks = [i + "" for i in stocklist]
 stocks
 df=pdr.get_data_yahoo(stocks,start,end)
@@ -146,7 +146,7 @@ for list in lst_output:
 print(b)
 app=Flask(__name__)
 CORS(app)
-@app.route("/hi")
+@app.route("/infosys")
 def hello():
     return jsonify({"data": b})
 if __name__=='__main__':

@@ -1,10 +1,12 @@
 import React, { useState,useEffect } from 'react'
 import axios from'axios'
 import ApexChart from './ApexChart'
+import ApexChartVol from './ApexChartVol'
 function DataFetch() {
   const datearr=[]
   const openarr=[]
   const closearr=[]
+  const volumearr=[]
 
     const [datas,setData]=useState([])
     const [link,setLink]=useState('data')
@@ -26,6 +28,7 @@ function DataFetch() {
       datearr.push(data.Date)
       openarr.push(parseFloat(data.Open))
       closearr.push(parseFloat(data.Close))
+      volumearr.push(parseFloat(data.Volume))
     })
 
    
@@ -45,7 +48,7 @@ function DataFetch() {
     </select>
   
       <ApexChart datearr={datearr} openarr={openarr} closearr={closearr}/>
-
+      <ApexChartVol volarr={volumearr} datearr={datearr}/>
     </div>
   )
 }

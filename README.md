@@ -1,3 +1,4 @@
+![Screenshot (117)](https://user-images.githubusercontent.com/83994461/191001545-246c0050-66d3-4e94-b7ad-1cd249bf7053.png)
 
 # BIT_LORDS_Hyland
 
@@ -29,5 +30,12 @@ Now you can see our website running on your default web browser on localhost wit
 
 You can see the output as per the below images
 
+Our visulaization Models
+
 ![Screenshot (115)](https://user-images.githubusercontent.com/83994461/191001214-c78242d4-672f-4b49-b93d-fc2a5e58084f.png)
+
 ![Screenshot (116)](https://user-images.githubusercontent.com/83994461/191001220-2511b18f-55d4-40a6-b0b2-194864fdc212.png)
+
+Our Prediction Model
+
+![Screenshot (117)](https://user-images.githubusercontent.com/83994461/191001545-246c0050-66d3-4e94-b7ad-1cd249bf7053.png)
